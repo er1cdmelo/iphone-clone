@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <link rel="stylesheet" href="style.css">
+  
+  <script src="/js/main.js"></script>
+  <title>Document</title>
+</head>
+<body>
+  <div class="base">
+    <div class="minsize">
+      <h1>NÃO É POSSÍVEL VISUALIZAR NO MOMENTO</h1>
+    </div>
+    <div class="telefone">
+      <div id="power"class="power" onclick="powerOn()"></div>
+      <div class="volume-up" onclick="volumeUp()"></div>
+      <div class="volume-down" onclick="volumeDown()"></div>
+      <div class="bolinha"></div>
+      <div class="camera"></div>
+      <div class="autofalante"></div>
+      <div id="tela" class="tela">
+        <div class="apple-icon" id="apple"> 
+          <i style="font-size:50px" class="fa">&#xf179;</i>
+       </div>
+      </div>
+      <div id="tela-ligada"class="tela-ligada">
+        <div class="noti-bar">
+            <p>14:30</p>
+            <img class="signal"src="/img/signal.png" alt="signal">
+            <p class="fg">4G</p>
+            <img class="battery"src="/img/battery.png" alt="">
+        </div>
+        
+        <div class="apps-grid">
+            <img id="mail"src="/img/mail.png" alt="mail"onclick="clickApp(this)">
+            <img id="calendar"src="/img/calendar.jpg" alt="calendar"onclick="clickApp(this)">
+            <img id="photos"src="/img/photos.png" alt="photos"onclick="clickApp(this)">
+            <img id="camera"src="/img/camera.png" alt="camera"onclick="clickApp(this)">
+            <div class="segunda-fileira">
+              <img id="maps"src="/img/maps.jpg" alt="maps"onclick="clickApp(this)">
+              <img id="clock"src="/img/clock.png" alt="clock"onclick="clickApp(this)">
+              <img id="weather"src="/img/weather.png" alt="weather"onclick="clickApp(this)">
+              <img id="home-app"src="/img/home-app.png" alt="home-app"onclick="clickApp(this)">
+            </div>
+            <div class="terceira-fileira">
+              <img id="stocks"src="/img/stocks.png" alt="stocks"onclick="clickApp(this)">
+              <img id="notes"src="/img/notes.png" alt="notes"onclick="clickApp(this)">
+              <img id="reminders"src="/img/reminders.png" alt="reminders"onclick="clickApp(this)">
+              <img id="facetime"src="/img/facetime.png" alt="facetime"onclick="clickApp(this)">
+            </div>
+            <div class="quarta-fileira">
+              <img id="apple-store"src="/img/apple-store.png" alt="apple-store"onclick="clickApp(this)">
+              <img id="itunes-store"src="/img/itunes-store.png" alt="itunes-store"onclick="clickApp(this)">
+              <img id="ibooks"src="/img/ibook.png" alt="ibooks"onclick="clickApp(this)">
+              <img id="health"src="/img/health.png" alt="health"onclick="clickApp(this)">
+            </div>  
+        </div>
+        <div class="volume-bar" id="volume-bar">
+          <div class="volume-bar-active" id="volume-bar-active"></div>
+          <img class="volume"src="/img/volume-up-interface-symbol.png" alt="volume">
+        </div>
+        <div class="task-bar">
+          <img class="app" id="call"src="/img/call.png" alt="call" onclick="openTell()" onclick="clickApp(this)" >
+          <img class="app" id="safari"src="/img/safari.png" alt="safari"onclick="clickApp(this)">
+          <img class="app" id="message"src="/img/message.png" alt="message"onclick="clickApp(this)">
+          <img class="app" id="music"src="/img/music.png" alt="music"onclick="clickApp(this)">
+        </div>
+      <div class="call-screen" id="call-screen">
+        <div class="numbers-screen"><h2 id="text-screen"></h2></div>
+        <div class="buttons">
+          <div class="primeira-fileirat">
+            <button onclick="clickNumber(this)"value="1">1</button>
+            <button onclick="clickNumber(this)"value="2">2</button>
+            <button onclick="clickNumber(this)"value="3">3</button>
+          </div>
+          <div class="segunda-fileirat">
+            <button onclick="clickNumber(this)"value="4">4</button>
+            <button onclick="clickNumber(this)"value="5">5</button>
+            <button onclick="clickNumber(this)"value="6">6</button>
+          </div>
+          <div class="terceira-fileirat">
+            <button onclick="clickNumber(this)"value="7">7</button>
+            <button onclick="clickNumber(this)"value="8">8</button>
+            <button onclick="clickNumber(this)"value="9">9</button>
+          </div>
+          <div class="quarta-fileirat">
+            <button onclick="clickNumber(this)"value="*">*</button>
+            <button onclick="clickNumber(this)"value="0">0</button>
+            <button onclick="clickNumber(this)" value="#">#</button>
+          </div>
+          <div class="quinta-fileirat">
+            <button></button>
+            <button id="callbutton"onclick="openCalling()"><img src="/img/phone-call.png" alt="phone-call"></button>
+            <button><img onclick="erase()"  id="delete-button" src="/img/delete.png" alt=""></button>
+          </div>
+          <div class="calling-screen" id="calling-screen">
+            <div class="contact-area">
+              <div class="calling-number"><h2 id="calling-number-text"></h2></div>
+              
+            </div>
+            <div class="call-buttons">
+              <div class="first-list">
+                <button id="mute" onclick="clickButton(this)"><img src="/img/mute.png" alt="mute"></button>
+                <p class="mute">mute</p>
+                <button id="keypad" onclick="clickButton(this)"><img src="/img/keypad.png" alt="keypad"></button>
+                <p class="keypad">keypad</p>
+                <button id="audio" onclick="clickButton(this)"><img src="/img/audio-bluetooth.png" alt="audio"></button>
+                <p class="audio">audio</p>
+                <div id="text-buttons-first">
+                </div>
+              </div>
+              <div class="second-list">
+                <button id="add-call" onclick="clickButton(this)"><img src="/img/add-call.png" alt="add-call"></button>
+                <p class="add-call">add call</p>
+                <button id="facetime-button" onclick="clickButton(this)"><img src="/img/facetime-button.png" alt="facetime"></button>
+                <p class="facetime-button">FaceTime</p>
+                <button id="contacts-button" onclick="clickButton(this)"><img src="/img/contacts-button.png" alt="contacts"></button>
+                <p class="contacts-button">contacts</p>
+              </div>
+              <div class="third-list">
+                <button id="call-off" onclick="endCall(this)"><img src="/img/phone-call.png" alt="call-off"></button>
+              </div>
+            </div>
+          </div>    
+        </div>
+      </div>  
+      </div>
+      <div class="home"onclick="clickhome()" id="home-button"></div>
+    </div>
+  </div>
+</body>
+</html>
